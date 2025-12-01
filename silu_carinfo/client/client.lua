@@ -25,7 +25,8 @@ RegisterCommand(Config.CommandName, function()
 
         outlineVehicles[vehicle] = true
         SetEntityDrawOutline(vehicle, true)
-        SetEntityDrawOutlineColor(vehicle, Config.OutlineColor.r, Config.OutlineColor.g, Config.OutlineColor.b)
+        SetEntityDrawOutlineColor(Config.OutlineColor.r, Config.OutlineColor.g, Config.OutlineColor.b, Config.OutlineColor.a)
+
 
         local turboCount = GetNumVehicleMods(vehicle, 18)
         local turboExists = turboCount > 0
